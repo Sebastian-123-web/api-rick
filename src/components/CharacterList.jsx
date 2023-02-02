@@ -4,7 +4,13 @@ import { Character } from "./Character";
 function NavPage({ page, setPage }) {
   return (
     <header className="av-re-page">
-      <button onClick={() => setPage(page - 1)} className="btn-av-re-page">Page{page - 1}</button>
+      {
+        page === 1 ? (
+          <button onClick={() => setPage(page - 1)} className="btn-av-re-page" disabled>Page{page - 1}</button>
+          ) : (
+            <button onClick={() => setPage(page - 1)} className="btn-av-re-page">Page{page - 1}</button>
+        )
+      }
       <p>Page: {page}</p>
       <button onClick={() => setPage(page + 1)} className="btn-av-re-page">Page{page + 1}</button>
     </header>

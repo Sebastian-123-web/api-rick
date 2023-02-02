@@ -55,7 +55,7 @@ export function CharacterList() {
           ))}
         </div>
       )}
-      <NavPage page={page} setPage={setPage} />
+      <NavPage page={page} setPage={setPage} characters={characters.length} />
     </div>
   );
 }

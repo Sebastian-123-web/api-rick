@@ -1,18 +1,20 @@
 import { useState, useEffect } from "react";
 import { Character } from "./Character";
 
-function NavPage({ page, setPage }) {
+function NavPage({ page, setPage, characters }) {
   return (
     <header className="av-re-page">
       {
-        page === 1 ? (
-          <button onClick={() => setPage(page - 1)} className="btn-av-re-page" disabled>Page</button>
-          ) : (
-            <button onClick={() => setPage(page - 1)} className="btn-av-re-page">Page{page - 1}</button>
-        )
+        page === 1 ? (<div></div>) : (<button onClick={() => setPage(page - 1)} className="btn-av-re-page">{page - 1} Back</button>)
       }
       <p>Page: {page}</p>
-      <button onClick={() => setPage(page + 1)} className="btn-av-re-page">Page{page + 1}</button>
+      {
+        characters < 20 ? (
+          <div></div>
+        ) : (
+          <button onClick={() => setPage(page + 1)} className="btn-av-re-page">Next {page + 1}</button>
+        )
+      }
     </header>
   );
 }
@@ -36,7 +38,7 @@ export function CharacterList() {
 
   return (
     <div className="container">
-      <NavPage page={page} setPage={setPage} />
+      <NavPage page={page} setPage={setPage} characters={characters.length} />
       {loading ? (
         <div>Loading..</div>
       ) : (

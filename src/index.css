@@ -51,6 +51,11 @@ body{
   -moz-box-shadow: 1px 1px 0px 1px #5f6163;
   box-shadow: 1px 1px 0px 1px #5f6163;
 }
+.btn-av-re-page:disabled{
+  -webkit-box-shadow: 2px 2px 0px 2px #5f6163;
+  -moz-box-shadow: 2px 2px 0px 2px #5f6163;
+  box-shadow: 2px 2px 0px 2px #5f6163;
+}
 
 .characters{
   display: grid;
@@ -87,4 +92,32 @@ body{
 .origin{
   font-size: 10px;
   margin-top: 10px;
+}
+
+@media screen and (min-width: 1010px) and (max-width:1080px){
+  
+}
+@media screen and (min-width: 810px) and (max-width:1060px){
+  .characters{
+    grid-template-columns: auto auto auto;
+  }
+  .av-re-page{
+    width: 750px;
+  }
+}
+@media screen and (min-width: 542px) and (max-width:810px){
+  .characters{
+    grid-template-columns: auto auto;
+  }
+  .av-re-page{
+    width: 490px;
+  }
+}
+@media screen and (max-width: 542px){
+  .characters{
+    grid-template-columns: auto;
+  }
+  .av-re-page{
+    width: 230px;
+  }
 }

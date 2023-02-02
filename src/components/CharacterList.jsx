@@ -6,7 +6,7 @@ function NavPage({ page, setPage }) {
     <header className="av-re-page">
       {
         page === 1 ? (
-          <button onClick={() => setPage(page - 1)} className="btn-av-re-page" disabled>Page{page - 1}</button>
+          <button onClick={() => setPage(page - 1)} className="btn-av-re-page" disabled>Page</button>
           ) : (
             <button onClick={() => setPage(page - 1)} className="btn-av-re-page">Page{page - 1}</button>
         )

@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+}
+body{
+  background-color: #18191a;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+}
+
+#root{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+
+.app-character{
+  width: 1010px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title{
+  text-align: center;
+  margin-top: 30px;
+}
+
+.av-re-page{
+  width: 1010px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.btn-av-re-page{
+  padding: 10px 15px;
+  background-color: #3a3b3c;
+  color: #fff;
+  -webkit-box-shadow: 2px 2px 0px 2px #5f6163;
+  -moz-box-shadow: 2px 2px 0px 2px #5f6163;
+  box-shadow: 2px 2px 0px 2px #5f6163;
+  border: none;
+  border-radius: 5px;
+}
+.btn-av-re-page:active{
+  -webkit-box-shadow: 1px 1px 0px 1px #5f6163;
+  -moz-box-shadow: 1px 1px 0px 1px #5f6163;
+  box-shadow: 1px 1px 0px 1px #5f6163;
+}
+
+.characters{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.card{
+  width: 200px;
+  background-color: #3a3b3c;
+  border-radius: 10px;
+  padding: 15px;
+  -webkit-box-shadow: 3px 3px 0px 3px #5f6163;
+  -moz-box-shadow: 3px 3px 0px 3px #5f6163;
+  box-shadow: 3px 3px 0px 3px #5f6163;
+}
+.card-character{
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.card-img{
+  border-radius: 10px;
+  width: 90%;
+}
+.name{
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.origin{
+  font-size: 10px;
+  margin-top: 10px;
+}
